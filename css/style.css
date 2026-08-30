@@ -162,6 +162,7 @@ section { position: relative; overflow: hidden; }
 .festival-info-heading { min-height:150px; display:grid; place-items:center; padding:35px var(--page-pad); }
 .festival-info-heading h2 { font-size:28px; text-transform:uppercase; margin:0; }
 
+.info-group { position: relative; }
 .info-card {
   min-height: 460px;
   display:grid;
