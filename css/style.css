@@ -305,4 +305,40 @@ section { position: relative; overflow: hidden; }
   .footer-list a, .footer-contact-info a { font-size: 16px; }
   .footer-location, .footer-brand-text { font-size: 15px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 16px; }
+  .back-to-top { bottom: 20px; width: 42px; height: 42px; }
+}
+
+/* Floating Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: var(--page-pad);
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(5, 5, 5, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
 }

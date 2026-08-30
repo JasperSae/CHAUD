@@ -1,19 +1,25 @@
 const toggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 const header = document.querySelector('.site-header');
+const backToTop = document.querySelector('.back-to-top');
 
 // Active navigation underline on scroll (scrollspy)
 const navLinks = document.querySelectorAll('.desktop-nav a[href^="#"], .mobile-nav a[href^="#"]');
-const sections = Array.from(navLinks).map(link => {
-  const id = link.getAttribute('href').slice(1);
-  return document.getElementById(id);
-}).filter(Boolean);
+
+function getSortedSections() {
+  const uniqueIds = Array.from(new Set(Array.from(navLinks).map(link => link.getAttribute('href').slice(1))));
+  return uniqueIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean)
+    .sort((a, b) => a.offsetTop - b.offsetTop);
+}
 
 function updateActiveNav() {
-  const scrollPosition = window.scrollY + 150; // offset for fixed header
+  const sections = getSortedSections();
+  const scrollPosition = window.scrollY + 160; // offset for fixed header
   let currentSection = null;
 
-  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
     currentSection = sections[sections.length - 1];
   } else {
     for (let i = 0; i < sections.length; i++) {
@@ -38,11 +44,24 @@ function updateActiveNav() {
 }
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight - 100) {
+  const scrollY = window.scrollY;
+
+  // Header scroll state
+  if (scrollY > window.innerHeight - 100) {
     header.classList.add('is-scrolled');
   } else {
     header.classList.remove('is-scrolled');
   }
+
+  // Back to top button visibility (appears after scrolling past hero/first section)
+  if (backToTop) {
+    if (scrollY > 650) {
+      backToTop.classList.add('is-visible');
+    } else {
+      backToTop.classList.remove('is-visible');
+    }
+  }
+
   updateActiveNav();
 }, { passive: true });
 
