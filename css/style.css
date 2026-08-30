@@ -67,7 +67,10 @@ h1,h2,h3 { font-family: var(--display); font-weight: 400; letter-spacing: -0.055
   font-size: 19px;
   text-transform: uppercase;
 }
+.desktop-nav a { position: relative; text-decoration: none; transition: opacity .2s ease; }
 .desktop-nav a:hover { opacity:.55; }
+.desktop-nav a.is-active,
+.mobile-nav a.is-active { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .ticket-button {
   display: inline-flex;
   align-items: center;
