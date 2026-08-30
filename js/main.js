@@ -1,5 +1,14 @@
 const toggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight - 100) {
+    header.classList.add('is-scrolled');
+  } else {
+    header.classList.remove('is-scrolled');
+  }
+});
 
 if (toggle && mobileNav) {
   toggle.addEventListener('click', () => {
