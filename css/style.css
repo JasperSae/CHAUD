@@ -190,14 +190,47 @@ section { position: relative; overflow: hidden; }
 .faq h2 { text-align:center; color:var(--green); font-size:clamp(84px, 11vw, 150px); line-height:.9; margin:0; }
 .faq-placeholder { width:min(580px, 88vw); margin:60px auto 0; text-align:center; }
 
-.cta-footer { min-height: 720px; padding: 0 var(--page-pad) 28px; display:flex; flex-direction:column; overflow: visible; }
+.cta-footer { min-height: auto; padding: 0 var(--page-pad) 48px; display:flex; flex-direction:column; overflow: visible; background: var(--black); color: #fff; }
 .sun { position:absolute; width:550px; height:550px; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:50%; background:var(--yellow); box-shadow:0 0 35px 12px var(--yellow); z-index: -1; }
-.save-card { position:relative; z-index:2; width:min(440px, 82vw); aspect-ratio:1; margin:-190px auto 40px; border-radius:50%; background:var(--yellow); border:1px solid rgba(0,0,0,.18); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.save-card { position:relative; z-index:2; width:min(440px, 82vw); aspect-ratio:1; margin:-190px auto 70px; border-radius:50%; background:var(--yellow); border:1px solid rgba(0,0,0,.18); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color: #000; }
 .save-card p { font-family:var(--display); font-size:30px; text-transform:uppercase; margin-bottom:22px; }
 .save-card h2 { font-size:52px; margin-bottom:22px; }
-.footer-links { margin-top:auto; width:min(760px,100%); align-self:center; display:grid; grid-template-columns: repeat(2, 1fr); gap:38px 90px; font-size:20px; text-transform:uppercase; }
-.footer-links div { display:flex; flex-direction:column; gap:5px; }
-.footer-links a:hover { text-decoration:underline; }
+
+/* Suspicious Antwerp inspired footer */
+.site-footer { width: 100%; max-width: 1140px; align-self: center; display: flex; flex-direction: column; gap: 48px; }
+
+.footer-newsletter { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding: 36px 0; border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.footer-newsletter-copy { max-width: 500px; }
+.footer-kicker { display: block; font-family: var(--display); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.55); margin-bottom: 8px; }
+.footer-newsletter-copy p { margin: 0; font-size: 20px; line-height: 1.35; color: #fff; }
+
+.footer-newsletter-form { display: flex; gap: 10px; width: 100%; max-width: 440px; }
+.footer-newsletter-form input { flex: 1; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 14px 22px; font-family: var(--body); font-size: 18px; color: #fff; outline: none; transition: border-color 0.2s ease, background 0.2s ease; }
+.footer-newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.4); text-transform: uppercase; font-size: 14px; letter-spacing: 0.04em; }
+.footer-newsletter-form input:focus { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
+.footer-newsletter-form button { background: #fff; color: #000; border: 1px solid #fff; border-radius: 999px; padding: 0 26px; font-family: var(--display); font-size: 14px; text-transform: uppercase; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.2s ease, color 0.2s ease; }
+.footer-newsletter-form button:hover { background: transparent; color: #fff; }
+
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.3fr 1.3fr; gap: 48px; padding-bottom: 20px; }
+.footer-col { display: flex; flex-direction: column; }
+.footer-heading { font-family: var(--display); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.5); margin-bottom: 18px; }
+
+.footer-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer-list a, .footer-contact-info a { color: #fff; font-size: 20px; text-decoration: none; transition: opacity 0.2s ease; }
+.footer-list a:hover, .footer-contact-info a:hover { opacity: 0.65; }
+
+.footer-contact-info { display: flex; flex-direction: column; gap: 12px; }
+.footer-location { margin: 0; font-size: 18px; color: rgba(255, 255, 255, 0.7); line-height: 1.4; }
+
+.footer-col--brand { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-brand-text { font-size: 18px; color: rgba(255, 255, 255, 0.7); line-height: 1.4; margin-bottom: 22px; }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-family: var(--display); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255, 255, 255, 0.45); }
+.footer-copyright { margin: 0; }
+.footer-legal { display: flex; align-items: center; gap: 10px; }
+.footer-legal a { color: rgba(255, 255, 255, 0.45); text-decoration: none; transition: color 0.2s ease; }
+.footer-legal a:hover { color: #fff; }
+.footer-divider { color: rgba(255, 255, 255, 0.2); }
 
 @media (max-width: 860px) {
   :root { --header-h: 72px; }
@@ -224,8 +257,11 @@ section { position: relative; overflow: hidden; }
   .info-card h2 { font-size:clamp(60px, 16vw, 100px); }
   .placeholder-image--wide { min-height:220px; }
   .partner-row { gap:30px; }
-  .cta-footer { min-height:680px; }
+  .cta-footer { min-height: auto; padding-bottom: 36px; }
   .save-card { margin-top:-90px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .footer-newsletter { flex-direction: column; align-items: flex-start; }
+  .footer-newsletter-form { max-width: 100%; }
 }
 
 @media (max-width: 520px) {
@@ -248,8 +284,17 @@ section { position: relative; overflow: hidden; }
   .faq { min-height:430px; padding: 70px var(--page-pad) 220px; }
   .faq-placeholder { margin-top:40px; }
   .sun { width:390px; height:390px; }
-  .save-card { margin-top: calc(30px - 41vw); }
+  .save-card { margin-top: calc(30px - 41vw); margin-bottom: 40px; }
   .save-card h2 { font-size:42px; }
   .save-card p { font-size:22px; }
-  .footer-links { grid-template-columns:1fr 1fr; gap:30px; font-size:16px; }
+  .site-footer { gap: 32px; margin-top: 20px; }
+  .footer-newsletter { padding: 24px 0; }
+  .footer-newsletter-copy p { font-size: 18px; }
+  .footer-newsletter-form { flex-direction: column; gap: 8px; }
+  .footer-newsletter-form input { font-size: 16px; padding: 12px 18px; }
+  .footer-newsletter-form button { height: 46px; font-size: 13px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-list a, .footer-contact-info a { font-size: 18px; }
+  .footer-location, .footer-brand-text { font-size: 16px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 24px; }
 }
