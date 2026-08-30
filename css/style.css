@@ -211,7 +211,7 @@ section { position: relative; overflow: hidden; }
   .mobile-nav.is-open { display:flex; }
 
   .hero { min-height: 760px; }
-  .hero-logo { width:min(90vw, 600px); }
+  .hero-logo { width:min(90vw, 500px); max-height:35vh; transform: scale(2.8); margin-top: 0; }
   .hero-meta { grid-template-columns: 1fr 1fr; font-size:clamp(30px, 8vw, 58px); gap:25px; }
   .hero-meta p:nth-child(2) { grid-column:1 / -1; grid-row:1; font-size:.45em; text-align:left; white-space:normal; }
   .hero-meta p:first-child { grid-column:1; }
@@ -230,6 +230,7 @@ section { position: relative; overflow: hidden; }
 
 @media (max-width: 520px) {
   .hero { min-height:650px; padding-bottom:28px; }
+  .hero-logo { width: 90vw; max-height: 30vh; transform: scale(2.7); margin-top: 0; }
   .hero-meta { font-size:clamp(27px, 10vw, 42px); }
   .intro { min-height:330px; padding: 70px var(--page-pad); }
   .lineup { min-height:0; padding-top:65px; }
