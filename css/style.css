@@ -159,8 +159,11 @@ section { position: relative; overflow: hidden; }
 .merch h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
 .merch p { font-size:30px; }
 .merch-btn { margin-top: 36px; min-width: 180px; }
-.festival-info-heading { min-height:150px; display:grid; place-items:center; padding:35px var(--page-pad); }
-.festival-info-heading h2 { font-size:28px; text-transform:uppercase; margin:0; }
+.merch-gallery { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; max-width:1200px; margin:50px auto 0; }
+.merch-card { border-radius:20px; overflow:hidden; aspect-ratio:3 / 4; background:rgba(0,0,0,0.05); box-shadow:0 6px 20px rgba(0,0,0,0.06); transition:transform .3s ease, box-shadow .3s ease; }
+.merch-card:hover { transform:translateY(-6px); box-shadow:0 14px 30px rgba(0,0,0,0.12); }
+.merch-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+.merch-card:hover img { transform:scale(1.05); }
 
 .info-group { position: relative; }
 .info-card {
@@ -179,6 +182,8 @@ section { position: relative; overflow: hidden; }
 .info-card--green h2 { text-align: right; }
 .info-card--green p { max-width:620px; text-align: right; margin-left: auto; }
 .placeholder-image--wide { min-height:270px; }
+.info-image { width:100%; height:100%; min-height:360px; max-height:520px; object-fit:cover; border-radius:26px; border:1px solid rgba(0,0,0,0.1); box-shadow:0 10px 30px rgba(0,0,0,0.08); display:block; }
+.jiekaa-image-wrapper { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
 
 .presale { min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px var(--page-pad); }
 .presale > *:not(.glow) { position:relative; z-index:1; }
@@ -359,6 +364,7 @@ section { position: relative; overflow: hidden; }
   .partner-row { gap:30px; }
   .practical-grid { grid-template-columns: 1fr; max-width: 580px; }
   .tropichaud-gallery { grid-template-columns: 1fr; max-width: 480px; }
+  .merch-gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
   .footer-newsletter { flex-direction: column; align-items: flex-start; }
   .footer-newsletter-form { max-width: 100%; }
@@ -379,8 +385,10 @@ section { position: relative; overflow: hidden; }
   .placeholder-image { min-height:82px; }
   .merch { min-height:390px; padding: 70px var(--page-pad); }
   .merch p { font-size:25px; }
+  .merch-gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 35px; }
   .info-card { padding: 70px var(--page-pad); }
   .info-card h2 { margin-bottom:22px; }
+  .info-image { min-height: 260px; max-height: 380px; border-radius: 18px; }
   .presale { min-height:360px; padding: 70px var(--page-pad); }
   .partners { min-height:240px; padding: 70px 0; }
   .partner-item { padding: 10px 20px; font-size: 16px; }
