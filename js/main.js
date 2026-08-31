@@ -83,21 +83,33 @@ if (toggle && mobileNav) {
   });
 }
 
-// Merch Carousel Arrow Controls
+// Merch Carousel Arrow Controls with Infinite Loop
 const merchSlider = document.getElementById('merchSlider');
 const merchPrev = document.querySelector('.merch-nav-prev');
 const merchNext = document.querySelector('.merch-nav-next');
 
 if (merchSlider && merchPrev && merchNext) {
-  merchPrev.addEventListener('click', () => {
-    const firstCard = merchSlider.querySelector('.merch-card');
-    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
-    merchSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  });
-
   merchNext.addEventListener('click', () => {
     const firstCard = merchSlider.querySelector('.merch-card');
     const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
-    merchSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    const maxScroll = merchSlider.scrollWidth - merchSlider.clientWidth;
+
+    if (merchSlider.scrollLeft >= maxScroll - 15) {
+      merchSlider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      merchSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
+
+  merchPrev.addEventListener('click', () => {
+    const firstCard = merchSlider.querySelector('.merch-card');
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+    const maxScroll = merchSlider.scrollWidth - merchSlider.clientWidth;
+
+    if (merchSlider.scrollLeft <= 15) {
+      merchSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      merchSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
   });
 }
