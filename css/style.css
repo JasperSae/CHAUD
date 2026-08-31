@@ -276,8 +276,11 @@ section { position: relative; overflow: hidden; }
 .partner-cta p { font-size:21px; margin:0; }
 .partner-btn { min-width:170px; }
 
-.tropichaud-gallery { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; max-width:880px; margin:35px auto 0; }
-.tropichaud-card { min-height:160px; }
+.tropichaud-gallery { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:1040px; margin:45px auto 0; }
+.tropichaud-card { border-radius:20px; overflow:hidden; aspect-ratio:4 / 5; background:rgba(0,0,0,0.05); box-shadow:0 6px 20px rgba(0,0,0,0.06); transition:transform .3s ease, box-shadow .3s ease; }
+.tropichaud-card:hover { transform:translateY(-6px); box-shadow:0 14px 30px rgba(0,0,0,0.12); }
+.tropichaud-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+.tropichaud-card:hover img { transform:scale(1.05); }
 
 .faq { min-height:600px; padding:120px var(--page-pad) clamp(220px, 28vw, 340px); }
 .faq h2 { text-align:center; color:var(--green); font-size:clamp(84px, 11vw, 150px); line-height:.9; margin:0; }
