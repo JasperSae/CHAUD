@@ -155,9 +155,10 @@ section { position: relative; overflow: hidden; }
 .glow--green { width:800px; height:800px; background: radial-gradient(circle, var(--green) 0%, rgba(160,198,61,0) 70%); top:-50px; left:50%; transform: translateX(-50%); filter: blur(60px); opacity: 0.95; }
 
 .merch { min-height:500px; padding: 100px var(--page-pad) 100px; }
-.merch-copy { max-width: 840px; margin:0 auto; }
+.merch-copy { max-width: 840px; margin:0 auto; display:flex; flex-direction:column; align-items:center; }
 .merch h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
 .merch p { font-size:30px; }
+.merch-btn { margin-top: 36px; min-width: 180px; }
 .festival-info-heading { min-height:150px; display:grid; place-items:center; padding:35px var(--page-pad); }
 .festival-info-heading h2 { font-size:28px; text-transform:uppercase; margin:0; }
 
