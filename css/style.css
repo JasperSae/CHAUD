@@ -262,7 +262,10 @@ section { position: relative; overflow: hidden; }
 .lineup-subkicker { text-align:center; margin-top:-40px; margin-bottom:35px; }
 .lineup-intro { max-width:820px; margin:0 auto 40px; text-align:center; font-size:24px; }
 .lineup-intro p { margin:0; }
-.artist--headliner { border-bottom:2px solid rgba(0,0,0,0.15); padding-bottom:20px; margin-bottom:10px; }
+.artist--headliner { display:grid; grid-template-columns:1fr minmax(140px, 220px); align-items:center; gap:30px; border-bottom:2px solid rgba(0,0,0,0.15); padding-bottom:24px; margin-bottom:10px; }
+.artist-image-wrapper { width:100%; aspect-ratio:4 / 3; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1); border:1px solid rgba(0,0,0,0.12); background:rgba(0,0,0,0.05); }
+.artist-image { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
+.artist:hover .artist-image { transform:scale(1.06); }
 .lineup-note { max-width:760px; margin:45px auto 0; text-align:center; font-size:20px; opacity:0.9; }
 .lineup-note p { margin:0; }
 .lineup-note a { text-decoration:underline; text-underline-offset:4px; }
