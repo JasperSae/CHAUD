@@ -266,7 +266,21 @@ section { position: relative; overflow: hidden; }
 .artist-image-wrapper { width:100%; aspect-ratio:4 / 3; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1); border:1px solid rgba(0,0,0,0.12); background:rgba(0,0,0,0.05); }
 .artist-image { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
 .artist:hover .artist-image { transform:scale(1.06); }
-.lineup-note { max-width:760px; margin:45px auto 0; text-align:center; font-size:20px; opacity:0.9; }
+
+.timetable-wrapper { position:relative; max-width:860px; margin:45px auto 0; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.12); background:rgba(255,255,255,0.45); box-shadow:0 10px 30px rgba(0,0,0,0.06); }
+.timetable-preview { padding:28px 32px; filter:blur(4px); opacity:0.4; user-select:none; pointer-events:none; display:flex; flex-direction:column; gap:12px; }
+.timetable-header { display:grid; grid-template-columns:90px 1fr 1fr; font-family:var(--display); font-size:15px; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; padding-bottom:10px; border-bottom:1px solid rgba(0,0,0,0.15); }
+.timetable-row { display:grid; grid-template-columns:90px 1fr 1fr; align-items:center; gap:16px; padding:8px 0; border-bottom:1px dashed rgba(0,0,0,0.08); }
+.timetable-row .time { font-family:var(--display); font-weight:600; font-size:16px; }
+.timetable-row .slot { font-size:16px; padding:8px 14px; border-radius:10px; background:rgba(0,0,0,0.06); font-family:var(--display); text-transform:uppercase; }
+.timetable-row .slot--headliner { background:var(--black); color:#fff; font-weight:600; }
+.timetable-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; background:radial-gradient(circle, rgba(231,42,121,0.2) 0%, rgba(231,42,121,0.55) 100%); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); z-index:3; }
+.timetable-badge { text-align:center; background:rgba(255,255,255,0.95); border:1px solid rgba(0,0,0,0.1); padding:28px 36px; border-radius:22px; box-shadow:0 12px 32px rgba(0,0,0,0.15); max-width:480px; }
+.timetable-badge-kicker { display:block; font-family:var(--display); font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--pink); font-weight:700; margin-bottom:6px; }
+.timetable-badge h3 { font-size:clamp(26px, 3.5vw, 36px); margin-bottom:8px; text-transform:uppercase; line-height:1; }
+.timetable-badge p { font-size:17px; margin:0; line-height:1.35; color:rgba(0,0,0,0.75); }
+
+.lineup-note { max-width:760px; margin:35px auto 0; text-align:center; font-size:20px; opacity:0.9; }
 .lineup-note p { margin:0; }
 .lineup-note a { text-decoration:underline; text-underline-offset:4px; }
 
@@ -396,6 +410,15 @@ section { position: relative; overflow: hidden; }
   .section-kicker { margin-bottom:45px; }
   .artist h3 { font-size:clamp(38px, 12vw, 56px); }
   .artist { grid-template-columns:1fr 82px; gap:18px; }
+  .artist--headliner { grid-template-columns:1fr 100px; gap:16px; }
+  .artist-image-wrapper { border-radius:12px; }
+  .timetable-wrapper { border-radius:18px; margin-top:30px; }
+  .timetable-preview { padding:18px 14px; gap:8px; }
+  .timetable-header, .timetable-row { grid-template-columns:55px 1fr 1fr; gap:6px; font-size:12px; }
+  .timetable-row .slot { font-size:12px; padding:6px 8px; border-radius:6px; }
+  .timetable-badge { padding:20px 16px; border-radius:16px; }
+  .timetable-badge h3 { font-size:24px; }
+  .timetable-badge p { font-size:14px; }
   .placeholder-image { min-height:82px; }
   .merch { min-height:390px; padding: 70px var(--page-pad); }
   .merch p { font-size:25px; }
