@@ -82,3 +82,22 @@ if (toggle && mobileNav) {
     });
   });
 }
+
+// Merch Carousel Arrow Controls
+const merchSlider = document.getElementById('merchSlider');
+const merchPrev = document.querySelector('.merch-nav-prev');
+const merchNext = document.querySelector('.merch-nav-next');
+
+if (merchSlider && merchPrev && merchNext) {
+  merchPrev.addEventListener('click', () => {
+    const firstCard = merchSlider.querySelector('.merch-card');
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+    merchSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  merchNext.addEventListener('click', () => {
+    const firstCard = merchSlider.querySelector('.merch-card');
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+    merchSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
