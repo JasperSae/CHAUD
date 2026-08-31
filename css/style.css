@@ -312,6 +312,8 @@ section { position: relative; overflow: hidden; }
   .info-card--reverse > :first-child { order:2; }
   .info-card--reverse > :last-child { order:1; }
   .info-card h2 { font-size:clamp(60px, 16vw, 100px); }
+  .info-card--green h2 { text-align: left; }
+  .info-card--green p { text-align: left; margin-left: 0; }
   .placeholder-image--wide { min-height:220px; }
   .partner-row { gap:30px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
