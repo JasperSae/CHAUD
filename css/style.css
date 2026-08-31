@@ -194,6 +194,7 @@ section { position: relative; overflow: hidden; }
   overflow: hidden;
   display: flex;
   user-select: none;
+  padding: 16px 0;
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
@@ -202,7 +203,7 @@ section { position: relative; overflow: hidden; }
   display: flex;
   align-items: center;
   gap: clamp(24px, 3.5vw, 50px);
-  padding-right: clamp(24px, 3.5vw, 50px);
+  padding: 6px clamp(24px, 3.5vw, 50px) 6px 0;
   flex-shrink: 0;
   animation: partnerScroll 40s linear infinite;
   will-change: transform;
@@ -225,13 +226,14 @@ section { position: relative; overflow: hidden; }
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .partner-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   background: rgba(0, 0, 0, 0.1);
   border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
 }
 
 @keyframes partnerScroll {
