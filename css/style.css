@@ -177,7 +177,7 @@ section { position: relative; overflow: hidden; }
 .info-card h2 { font-size:clamp(65px, 9vw, 124px); line-height:.85; text-transform:uppercase; margin-bottom:30px; }
 .info-card p { max-width:720px; }
 .info-card--green h2 { text-align: right; }
-.info-card--green p { max-width:620px; }
+.info-card--green p { max-width:620px; text-align: right; margin-left: auto; }
 .placeholder-image--wide { min-height:270px; }
 
 .presale { min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px var(--page-pad); }
