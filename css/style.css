@@ -241,7 +241,7 @@ section { position: relative; overflow: hidden; }
   to { transform: translateX(-100%); }
 }
 
-.faq { min-height:480px; padding:100px var(--page-pad) clamp(160px, 22vw, 260px); }
+.faq { min-height:600px; padding:120px var(--page-pad) clamp(220px, 28vw, 340px); }
 .faq h2 { text-align:center; color:var(--green); font-size:clamp(84px, 11vw, 150px); line-height:.9; margin:0; }
 .faq-placeholder { width:min(580px, 88vw); margin:60px auto 0; text-align:center; }
 
@@ -336,8 +336,8 @@ section { position: relative; overflow: hidden; }
   .partners { min-height:240px; padding: 70px 0; }
   .partner-item { padding: 10px 20px; font-size: 16px; }
   .partner-track { animation-duration: 28s; }
-  .faq { min-height:380px; padding: 70px var(--page-pad) clamp(130px, 20vw, 180px); }
-  .faq-placeholder { margin-top:40px; }
+  .faq { min-height:480px; padding: 80px var(--page-pad) clamp(180px, 26vw, 240px); }
+  .faq-placeholder { margin-top:50px; }
   .cta { padding-bottom: 60px; }
   .site-footer { padding: 36px var(--page-pad) 24px; }
   .footer-container { gap: 24px; }
