@@ -212,9 +212,10 @@ section { position: relative; overflow: hidden; }
 .partner-card--main .partner-logo--ms-services { max-height:108px; max-width:92%; transform:scale(1.1); }
 
 .partner-grid--city { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; width:100%; }
-.partner-card--city { position:relative; background:#fff; border:1px solid rgba(0,0,0,0.09); border-radius:18px; padding:24px 20px; min-height:105px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.04); transition:transform .25s ease, box-shadow .25s ease; }
-.partner-card--city:hover { transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,0.09); }
-.partner-card--city .partner-logo { max-height:50px; max-width:82%; width:auto; height:auto; object-fit:contain; }
+.partner-card--city { position:relative; background:#fff; border:1px solid rgba(0,0,0,0.09); border-radius:20px; padding:26px 20px; min-height:120px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.04); transition:transform .25s ease, box-shadow .25s ease; }
+.partner-card--city:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,0.1); }
+.partner-card--city .partner-logo { max-height:68px; max-width:88%; width:auto; height:auto; object-fit:contain; }
+.partner-card--city .partner-placeholder-name { font-size:16px; }
 
 .partner-grid--regular { display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; width:100%; }
 .partner-card--regular { position:relative; background:rgba(255,255,255,0.75); border:1px solid rgba(0,0,0,0.07); border-radius:13px; padding:14px 12px; min-height:72px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.025); transition:transform .2s ease, background .2s ease, box-shadow .2s ease; }
@@ -438,8 +439,9 @@ section { position: relative; overflow: hidden; }
   .partner-card--main .partner-logo--p-productions,
   .partner-card--main .partner-logo--ms-services { max-height: 70px; transform: scale(1.1); }
   .partner-grid--city { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .partner-card--city { padding: 18px 14px; min-height: 82px; border-radius: 14px; }
-  .partner-card--city .partner-logo { max-height: 40px; }
+  .partner-card--city { padding: 18px 14px; min-height: 90px; border-radius: 16px; }
+  .partner-card--city .partner-logo { max-height: 52px; max-width: 88%; }
+  .partner-card--city .partner-placeholder-name { font-size: 14px; }
   .partner-grid--regular { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .partner-card--regular { padding: 14px 10px; min-height: 65px; border-radius: 12px; }
   .partner-card--regular .partner-logo { max-height: 32px; }
