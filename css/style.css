@@ -487,25 +487,19 @@ section { position: relative; overflow: hidden; }
   .info-card h2 { margin-bottom:22px; }
   .info-image { min-height: 260px; max-height: 380px; border-radius: 18px; }
   .jiekaa-gallery {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 6px 4px 16px;
-    margin: 0 calc(var(--page-pad) * -1) 14px;
-    padding-left: var(--page-pad);
-    padding-right: var(--page-pad);
-    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
   }
-  .jiekaa-gallery::-webkit-scrollbar { display: none; }
   .jiekaa-photo-card {
-    flex: 0 0 76vw;
-    width: auto;
+    width: 100%;
     aspect-ratio: 2 / 3;
-    border-radius: 18px;
-    scroll-snap-align: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
   }
   .presale { min-height:360px; padding: 70px var(--page-pad); }
   .partners { min-height:380px; padding: 70px var(--page-pad); }
