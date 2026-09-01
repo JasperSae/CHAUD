@@ -207,9 +207,9 @@ section { position: relative; overflow: hidden; }
 .partner-grid--main { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; width:100%; }
 .partner-card--main { position:relative; background:#fff; border:2px solid rgba(0,0,0,0.12); border-radius:24px; padding:38px 24px; min-height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 12px 30px rgba(0,0,0,0.06); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .partner-card--main:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.13); border-color:rgba(0,0,0,0.35); }
-.partner-card--main .partner-logo { max-height:80px; max-width:88%; width:auto; height:auto; object-fit:contain; transform:scale(1.05); }
+.partner-card--main .partner-logo { max-height:84px; max-width:90%; width:auto; height:auto; object-fit:contain; transform:scale(1.1); }
 .partner-card--main .partner-logo--p-productions,
-.partner-card--main .partner-logo--ms-services { max-height:103px; max-width:90%; transform:scale(1.05); }
+.partner-card--main .partner-logo--ms-services { max-height:108px; max-width:92%; transform:scale(1.1); }
 
 .partner-grid--city { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; width:100%; }
 .partner-card--city { position:relative; background:#fff; border:1px solid rgba(0,0,0,0.09); border-radius:18px; padding:24px 20px; min-height:105px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.04); transition:transform .25s ease, box-shadow .25s ease; }
@@ -434,9 +434,9 @@ section { position: relative; overflow: hidden; }
   .partners-container { gap: 28px; margin-top: 30px; }
   .partner-grid--main { grid-template-columns: 1fr; gap: 12px; }
   .partner-card--main { padding: 24px 18px 20px; min-height: 100px; border-radius: 18px; }
-  .partner-card--main .partner-logo { max-height: 55px; transform: scale(1.05); }
+  .partner-card--main .partner-logo { max-height: 57px; transform: scale(1.1); }
   .partner-card--main .partner-logo--p-productions,
-  .partner-card--main .partner-logo--ms-services { max-height: 67px; transform: scale(1.05); }
+  .partner-card--main .partner-logo--ms-services { max-height: 70px; transform: scale(1.1); }
   .partner-grid--city { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .partner-card--city { padding: 18px 14px; min-height: 82px; border-radius: 14px; }
   .partner-card--city .partner-logo { max-height: 40px; }
