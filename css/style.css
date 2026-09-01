@@ -220,7 +220,9 @@ section { position: relative; overflow: hidden; }
 .partner-grid--regular { display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; width:100%; }
 .partner-card--regular { position:relative; background:rgba(255,255,255,0.75); border:1px solid rgba(0,0,0,0.07); border-radius:15px; padding:16px 14px; min-height:86px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.025); transition:transform .2s ease, background .2s ease, box-shadow .2s ease; }
 .partner-card--regular:hover { transform:translateY(-3px); background:#fff; box-shadow:0 6px 16px rgba(0,0,0,0.07); }
-.partner-card--regular .partner-logo { max-height:48px; max-width:88%; width:auto; height:auto; object-fit:contain; }
+.partner-card--regular .partner-logo { max-height:50px; max-width:88%; width:auto; height:auto; object-fit:contain; }
+.partner-card--regular .partner-logo--intal-clima,
+.partner-card--regular .partner-logo--uitleendienst { max-height:58px; max-width:92%; transform:scale(1.08); }
 
 .partner-card--placeholder { background:rgba(0,0,0,0.025); border:1.5px dashed rgba(0,0,0,0.14); }
 .partner-card--placeholder:hover { background:rgba(255,255,255,0.9); border-style:solid; }
@@ -445,6 +447,8 @@ section { position: relative; overflow: hidden; }
   .partner-grid--regular { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .partner-card--regular { padding: 16px 12px; min-height: 74px; border-radius: 14px; }
   .partner-card--regular .partner-logo { max-height: 42px; max-width: 88%; }
+  .partner-card--regular .partner-logo--intal-clima,
+  .partner-card--regular .partner-logo--uitleendienst { max-height: 48px; max-width: 90%; transform: scale(1.08); }
   .partner-placeholder-name { font-size: 13.5px; }
   .faq { min-height:600px; padding: 85px var(--page-pad) clamp(260px, 46vw, 340px); }
   .faq-placeholder { margin-top:50px; }
