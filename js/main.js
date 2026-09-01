@@ -113,3 +113,34 @@ if (merchSlider && merchPrev && merchNext) {
     }
   });
 }
+
+// TropiCHAUD Carousel Arrow Controls with Infinite Loop
+const tropichaudSlider = document.getElementById('tropichaudSlider');
+const tropichaudPrev = document.querySelector('.tropichaud-nav-prev');
+const tropichaudNext = document.querySelector('.tropichaud-nav-next');
+
+if (tropichaudSlider && tropichaudPrev && tropichaudNext) {
+  tropichaudNext.addEventListener('click', () => {
+    const firstCard = tropichaudSlider.querySelector('.tropichaud-card');
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+    const maxScroll = tropichaudSlider.scrollWidth - tropichaudSlider.clientWidth;
+
+    if (tropichaudSlider.scrollLeft >= maxScroll - 15) {
+      tropichaudSlider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      tropichaudSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
+
+  tropichaudPrev.addEventListener('click', () => {
+    const firstCard = tropichaudSlider.querySelector('.tropichaud-card');
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+    const maxScroll = tropichaudSlider.scrollWidth - tropichaudSlider.clientWidth;
+
+    if (tropichaudSlider.scrollLeft <= 15) {
+      tropichaudSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      tropichaudSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  });
+}

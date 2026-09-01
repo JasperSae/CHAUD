@@ -261,11 +261,17 @@ section { position: relative; overflow: hidden; }
 .partner-cta p { font-size:21px; margin:0; }
 .partner-btn { min-width:170px; }
 
-.tropichaud-gallery { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:1040px; margin:45px auto 0; }
-.tropichaud-card { border-radius:20px; overflow:hidden; aspect-ratio:4 / 5; background:rgba(0,0,0,0.05); box-shadow:0 6px 20px rgba(0,0,0,0.06); transition:transform .3s ease, box-shadow .3s ease; }
-.tropichaud-card:hover { transform:translateY(-6px); box-shadow:0 14px 30px rgba(0,0,0,0.12); }
-.tropichaud-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
-.tropichaud-card:hover img { transform:scale(1.05); }
+.tropichaud-slider-container { position:relative; width:100%; max-width:1240px; margin:45px auto 0; display:flex; align-items:center; }
+.tropichaud-slider { display:flex; gap:24px; overflow-x:auto; scroll-behavior:smooth; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding:16px 4px; width:100%; }
+.tropichaud-slider::-webkit-scrollbar { display:none; }
+.tropichaud-slider .tropichaud-card { flex:0 0 calc((100% - 48px) / 3); scroll-snap-align:start; border-radius:22px; overflow:hidden; aspect-ratio:4 / 5; background:rgba(0,0,0,0.05); box-shadow:0 8px 24px rgba(0,0,0,0.07); transition:transform .3s ease, box-shadow .3s ease; user-select:none; }
+.tropichaud-slider .tropichaud-card:hover { transform:translateY(-6px); box-shadow:0 14px 32px rgba(0,0,0,0.13); }
+.tropichaud-slider .tropichaud-card img { width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; transition:transform .4s ease; }
+.tropichaud-slider .tropichaud-card:hover img { transform:scale(1.05); }
+.tropichaud-nav-btn { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:var(--black); color:#fff; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:5; transition:background .2s ease, transform .2s ease; }
+.tropichaud-nav-btn:hover { background:#222; transform:scale(1.08); }
+.tropichaud-nav-prev { margin-right:12px; }
+.tropichaud-nav-next { margin-left:12px; }
 
 .faq { min-height:600px; padding:120px var(--page-pad) clamp(220px, 28vw, 340px); }
 .faq h2 { text-align:center; color:var(--green); font-size:clamp(84px, 11vw, 150px); line-height:.9; margin:0; }
@@ -353,7 +359,8 @@ section { position: relative; overflow: hidden; }
   .partner-grid--main { grid-template-columns: 1fr; max-width: 520px; }
   .partner-grid--regular { grid-template-columns: repeat(2, 1fr); }
   .practical-grid { grid-template-columns: 1fr; max-width: 580px; }
-  .tropichaud-gallery { grid-template-columns: 1fr; max-width: 480px; }
+  .tropichaud-slider-container { padding: 0 10px; }
+  .tropichaud-slider .tropichaud-card { flex: 0 0 calc((100% - 20px) / 2); }
   .merch-slider-container { padding: 0 10px; }
   .merch-slider .merch-card { flex: 0 0 calc((100% - 20px) / 2); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
@@ -389,6 +396,10 @@ section { position: relative; overflow: hidden; }
   .merch-nav-btn { display: none; }
   .merch-slider { padding: 10px var(--page-pad); gap: 14px; }
   .merch-slider .merch-card { flex: 0 0 78vw; aspect-ratio: 4 / 5; border-radius: 18px; }
+  .tropichaud-slider-container { padding: 0; margin-top: 30px; }
+  .tropichaud-nav-btn { display: none; }
+  .tropichaud-slider { padding: 10px var(--page-pad); gap: 14px; }
+  .tropichaud-slider .tropichaud-card { flex: 0 0 78vw; aspect-ratio: 4 / 5; border-radius: 18px; }
   .info-card { padding: 70px var(--page-pad); }
   .info-card h2 { margin-bottom:22px; }
   .info-image { min-height: 260px; max-height: 380px; border-radius: 18px; }
