@@ -131,7 +131,7 @@ section { position: relative; overflow: hidden; }
 .hero-meta p:last-child { text-align:right; }
 .hero-meta p:last-child span { white-space: nowrap; }
 
-.intro { min-height: 390px; display:grid; place-items:center; padding: 100px var(--page-pad); }
+.intro { min-height: 390px; display:flex; flex-direction:column; align-items:center; padding: 100px var(--page-pad); overflow:hidden; position:relative; }
 .narrow-copy { position:relative; z-index:1; max-width:840px; text-align:center; }
 .narrow-copy h1, .narrow-copy h2 { font-size: clamp(34px, 4vw, 50px); margin-bottom: 14px; text-transform: uppercase; }
 .narrow-copy p { margin:0; }
@@ -155,7 +155,7 @@ section { position: relative; overflow: hidden; }
 }
 .glow--green { position:absolute; z-index:0; width:800px; height:800px; background: radial-gradient(circle, var(--green) 0%, rgba(160,198,61,0) 70%); top:-50px; left:50%; transform: translateX(-50%); filter: blur(60px); opacity: 0.95; pointer-events:none; }
 
-.merch { min-height:500px; padding: 100px var(--page-pad) 100px; }
+.merch { min-height:500px; padding: 100px var(--page-pad); overflow:hidden; position:relative; }
 .merch-copy { max-width: 840px; margin:0 auto; display:flex; flex-direction:column; align-items:center; }
 .merch h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
 .merch p { font-size:30px; }
@@ -390,16 +390,31 @@ section { position: relative; overflow: hidden; }
   .timetable-badge h3 { font-size:24px; }
   .timetable-badge p { font-size:14px; }
   .placeholder-image { min-height:82px; }
-  .merch { min-height:390px; padding: 70px var(--page-pad); }
-  .merch p { font-size:25px; }
-  .merch-slider-container { padding: 0; margin-top: 30px; }
-  .merch-nav-btn { display: none; }
-  .merch-slider { padding: 10px var(--page-pad); gap: 14px; }
-  .merch-slider .merch-card { flex: 0 0 78vw; aspect-ratio: 4 / 5; border-radius: 18px; }
-  .tropichaud-slider-container { padding: 0; margin-top: 30px; }
-  .tropichaud-nav-btn { display: none; }
-  .tropichaud-slider { padding: 10px var(--page-pad); gap: 14px; }
-  .tropichaud-slider .tropichaud-card { flex: 0 0 78vw; aspect-ratio: 4 / 5; border-radius: 18px; }
+  .merch, .intro { min-height:360px; padding: 70px var(--page-pad); }
+  .merch p { font-size:24px; }
+  .narrow-copy h2 { font-size: clamp(32px, 8vw, 44px); }
+  .merch-slider-container,
+  .tropichaud-slider-container {
+    width: calc(100% + (2 * var(--page-pad)));
+    margin: 30px calc(-1 * var(--page-pad)) 0;
+    padding: 0;
+  }
+  .merch-nav-btn,
+  .tropichaud-nav-btn {
+    display: none;
+  }
+  .merch-slider,
+  .tropichaud-slider {
+    padding: 10px var(--page-pad) 16px;
+    gap: 14px;
+    scroll-padding-left: var(--page-pad);
+  }
+  .merch-slider .merch-card,
+  .tropichaud-slider .tropichaud-card {
+    flex: 0 0 76vw;
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+  }
   .info-card { padding: 70px var(--page-pad); }
   .info-card h2 { margin-bottom:22px; }
   .info-image { min-height: 260px; max-height: 380px; border-radius: 18px; }
