@@ -140,7 +140,7 @@ section { position: relative; overflow: hidden; }
 
 .lineup { position:relative; overflow:hidden; min-height: 650px; padding: 85px var(--page-pad) 70px; }
 .lineup > *:not(.glow) { position:relative; z-index:2; }
-.section-kicker { text-align:center; font-size: clamp(24px, 3vw, 34px); margin-bottom: 65px; }
+.lineup h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
 .lineup-grid { display:grid; gap:28px; }
 .artist { display:grid; grid-template-columns: 1fr 130px; align-items:center; gap:30px; }
 .artist small { font-family:var(--body); font-size: 14px; }
@@ -283,14 +283,13 @@ section { position: relative; overflow: hidden; }
   background: #ffffff;
 }
 
-.section-subkicker { font-family:var(--display); font-size:clamp(15px, 2vw, 22px); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:24px; opacity:0.8; }
+.section-subkicker { font-family:var(--display); font-size:clamp(15px, 2vw, 22px); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:24px; opacity:0.8; text-align:center; }
 .card-kicker { font-family:var(--display); font-size:clamp(18px, 2.2vw, 24px); text-transform:uppercase; margin-bottom:18px; font-weight:600; }
 .card-meta { margin-top:28px; display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
 .card-date-loc { font-size:22px; margin:0; }
 
-.lineup-subkicker { text-align:center; margin-top:-40px; margin-bottom:35px; }
-.lineup-intro { max-width:820px; margin:0 auto 40px; text-align:center; font-size:24px; }
-.lineup-intro p { margin:0; }
+.lineup-intro { max-width:840px; margin:0 auto 45px; text-align:center; }
+.lineup-intro p { font-family:var(--body); font-size:30px; line-height:1.35; margin:0; }
 .artist--headliner { display:grid; grid-template-columns:1fr minmax(140px, 220px); align-items:center; gap:30px; border-bottom:2px solid rgba(0,0,0,0.15); padding-bottom:24px; margin-bottom:10px; }
 .artist-image-wrapper { width:100%; aspect-ratio:4 / 3; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1); border:1px solid rgba(0,0,0,0.12); background:rgba(0,0,0,0.05); }
 .artist-image { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
@@ -445,8 +444,7 @@ section { position: relative; overflow: hidden; }
   .practical { min-height: 380px; padding: 70px var(--page-pad); }
   .practical h2 { font-size: clamp(38px, 11vw, 56px); margin-bottom: 8px; }
   .practical-card { padding: 24px 20px; }
-  .lineup { min-height:0; padding-top:65px; }
-  .section-kicker { margin-bottom:45px; }
+  .lineup { min-height:0; padding: 70px var(--page-pad); }
   .artist h3 { font-size:clamp(38px, 12vw, 56px); }
   .artist { grid-template-columns:1fr 82px; gap:18px; }
   .artist--headliner { grid-template-columns:1fr 100px; gap:16px; }
@@ -460,8 +458,8 @@ section { position: relative; overflow: hidden; }
   .timetable-badge p { font-size:14px; }
   .placeholder-image { min-height:82px; }
   .merch, .intro { min-height:360px; padding: 70px var(--page-pad); }
-  .merch p, .presale p { font-size:24px; }
-  .merch p.section-subkicker, .presale p.section-subkicker { font-size: clamp(14px, 3.5vw, 18px); }
+  .merch p, .presale p, .lineup-intro p { font-size:24px; }
+  .section-subkicker { font-size: clamp(14px, 3.5vw, 18px); }
   .narrow-copy h2 { font-size: clamp(32px, 8vw, 44px); }
   .merch-slider-container,
   .tropichaud-slider-container {
