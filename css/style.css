@@ -155,10 +155,14 @@ section { position: relative; overflow: hidden; }
 }
 .glow--green { position:absolute; z-index:0; width:800px; height:800px; background: radial-gradient(circle, var(--green) 0%, rgba(160,198,61,0) 70%); top:-50px; left:50%; transform: translateX(-50%); filter: blur(60px); opacity: 0.95; pointer-events:none; }
 
-.merch { min-height:500px; padding: 100px var(--page-pad); overflow:hidden; position:relative; }
-.merch-copy { max-width: 840px; margin:0 auto; display:flex; flex-direction:column; align-items:center; }
-.merch h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
-.merch p { font-size:30px; }
+.merch,
+.tropichaud { min-height:500px; padding: 100px var(--page-pad); overflow:hidden; position:relative; }
+.merch-copy,
+.tropichaud-copy { max-width: 840px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center; position:relative; z-index:1; }
+.merch h2,
+.tropichaud h2 { font-size:clamp(72px, 9vw, 128px); line-height:.9; text-transform:uppercase; text-align:center; margin-bottom:25px; }
+.merch p,
+.tropichaud p { font-family:var(--body); font-size:30px; line-height:1.35; text-transform:none; max-width:840px; margin:0 auto; text-align:center; }
 .merch-btn { margin-top: 36px; min-width: 180px; }
 .merch-slider-container { position:relative; max-width:1240px; margin:50px auto 0; display:flex; align-items:center; }
 .merch-slider { display:flex; gap:24px; overflow-x:auto; scroll-behavior:smooth; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding:16px 4px; width:100%; }
@@ -457,10 +461,9 @@ section { position: relative; overflow: hidden; }
   .timetable-badge h3 { font-size:24px; }
   .timetable-badge p { font-size:14px; }
   .placeholder-image { min-height:82px; }
-  .merch, .intro { min-height:360px; padding: 70px var(--page-pad); }
-  .merch p, .presale p, .lineup-intro p { font-size:24px; }
+  .merch, .tropichaud, .intro { min-height:360px; padding: 70px var(--page-pad); }
+  .merch p, .tropichaud p, .presale p, .lineup-intro p { font-size:24px; }
   .section-subkicker { font-size: clamp(14px, 3.5vw, 18px); }
-  .narrow-copy h2 { font-size: clamp(32px, 8vw, 44px); }
   .merch-slider-container,
   .tropichaud-slider-container {
     width: calc(100% + (2 * var(--page-pad)));
