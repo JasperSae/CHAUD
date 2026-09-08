@@ -192,7 +192,33 @@ section { position: relative; overflow: hidden; }
 .info-card p { max-width:720px; }
 .info-card--green h2 { text-align: right; }
 .info-card--green p { max-width:620px; text-align: right; margin-left: auto; }
-.placeholder-image--wide { min-height:270px; }
+.warmste-week-card {
+  background: #ffffff;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
+  padding: clamp(24px, 3.5vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.warmste-week-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.14);
+}
+.warmste-week-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 .info-image { width:100%; height:100%; min-height:360px; max-height:520px; object-fit:cover; border-radius:26px; border:1px solid rgba(0,0,0,0.1); box-shadow:0 10px 30px rgba(0,0,0,0.08); display:block; }
 #jiekaa { grid-template-columns: auto 1fr; align-items: center; gap: clamp(24px, 3.5vw, 44px); }
 .jiekaa-gallery { display: flex; gap: 18px; width: fit-content; max-width: 100%; }
@@ -414,7 +440,7 @@ section { position: relative; overflow: hidden; }
   .info-card h2 { font-size:clamp(60px, 16vw, 100px); }
   .info-card--green h2 { text-align: left; }
   .info-card--green p { text-align: left; margin-left: 0; }
-  .placeholder-image--wide { min-height:220px; }
+  .warmste-week-card { max-width: 380px; margin-bottom: 24px; }
   .partner-row { gap:30px; }
   .partner-grid--main { grid-template-columns: repeat(2, 1fr); max-width: 680px; margin: 0 auto; }
   .partner-grid--city { grid-template-columns: repeat(2, 1fr); max-width: 680px; margin: 0 auto; }
@@ -476,6 +502,7 @@ section { position: relative; overflow: hidden; }
   }
   .info-card { padding: 70px var(--page-pad); }
   .info-card h2 { margin-bottom:22px; }
+  .warmste-week-card { max-width: 100%; border-radius: 20px; padding: 22px 18px; margin-bottom: 20px; }
   .info-image { min-height: 260px; max-height: 380px; border-radius: 18px; }
   .jiekaa-gallery {
     display: grid;
