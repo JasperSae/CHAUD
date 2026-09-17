@@ -362,12 +362,16 @@ section { position: relative; overflow: hidden; }
 .partner-card--main .partner-name { font-size:16px; font-weight:700; letter-spacing:0.04em; }
 
 /* Tier 2: Stadspartners */
-.partner-grid--city { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; width:100%; }
+.partner-grid--city { display:grid; grid-template-columns:repeat(5, 1fr); gap:16px; width:100%; }
 .partner-card--city { position:relative; background:#fff; border:1.5px solid rgba(0,0,0,0.09); border-radius:20px; padding:20px 16px 16px; min-height:140px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
 .partner-card--city:hover { transform:translateY(-4px); box-shadow:0 12px 26px rgba(0,0,0,0.09); }
 .partner-card--city .partner-logo-box { height:64px; }
 .partner-card--city .partner-logo { max-height:60px; max-width:86%; }
 .partner-card--city .partner-name { font-size:14px; font-weight:600; opacity:0.9; }
+
+@media (max-width: 1040px) and (min-width: 861px) {
+  .partner-grid--city { grid-template-columns: repeat(3, 1fr); justify-content: center; }
+}
 
 /* Tier 3: Buurtpartners */
 .partner-grid--regular { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; width:100%; }
