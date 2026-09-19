@@ -145,21 +145,3 @@ if (tropichaudSlider && tropichaudPrev && tropichaudNext) {
   });
 }
 
-// Coming Soon Ticket Buttons Feedback
-document.querySelectorAll('.ticket-btn-wrapper').forEach((wrapper) => {
-  const btn = wrapper.querySelector('a');
-  if (!btn) return;
-
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    wrapper.classList.add('is-active');
-
-    if (wrapper._tooltipTimeout) {
-      clearTimeout(wrapper._tooltipTimeout);
-    }
-    wrapper._tooltipTimeout = setTimeout(() => {
-      wrapper.classList.remove('is-active');
-    }, 2800);
-  });
-});
-
