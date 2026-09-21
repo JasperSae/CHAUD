@@ -275,6 +275,7 @@ section { position: relative; overflow: hidden; }
 .partner-card--regular:hover { transform:translateY(-3px); background:#fff; box-shadow:0 8px 20px rgba(0,0,0,0.07); }
 .partner-card--regular .partner-logo-box { height:48px; }
 .partner-card--regular .partner-logo { max-height:44px; max-width:88%; }
+.partner-card--regular .partner-logo--tall { max-height:50px; transform:scale(1.14); }
 .partner-card--regular .partner-name { font-size:13px; font-weight:600; opacity:0.82; }
 
 /* Partner Logo Placeholders (matching site signature placeholder style) */
