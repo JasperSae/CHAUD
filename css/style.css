@@ -108,15 +108,64 @@ section { position: relative; overflow: hidden; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-bg-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  display: block;
+  pointer-events: none;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 45%, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.75) 85%);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .hero-bg-media { background: url('../assets/logos/hero_bg_poster.webp') center/cover no-repeat; }
 }
 .hero-logo {
+  position: relative;
+  z-index: 10;
+  -webkit-transform: translate3d(0, 0, 10px);
+  transform: translate3d(0, 0, 10px);
+  will-change: transform;
   width: min(92vw, 1100px);
   max-height: 44vh;
   object-fit: contain;
   align-self: center;
   margin-top: clamp(12px, 3vh, 36px);
+  filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.95)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
 }
 .hero-meta {
+  position: relative;
+  z-index: 10;
+  -webkit-transform: translate3d(0, 0, 10px);
+  transform: translate3d(0, 0, 10px);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: end;
@@ -126,6 +175,7 @@ section { position: relative; overflow: hidden; }
   font-size: clamp(25px, 4.1vw, 64px);
   letter-spacing: -0.065em;
   line-height: .95;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 .hero-meta p { margin:0; }
 .hero-meta p:nth-child(2) { font-size: .66em; text-align:center; white-space:nowrap; }
@@ -451,9 +501,9 @@ section { position: relative; overflow: hidden; }
 }
 
 @media (max-width: 520px) {
-  .hero { min-height:650px; padding-bottom:28px; }
-  .hero-logo { width: 92vw; max-height: 30vh; margin-top: 0; }
-  .hero-meta { font-size:clamp(27px, 10vw, 42px); }
+  .hero { min-height:600px; padding-bottom:28px; }
+  .hero-logo { width: min(90vw, 420px); max-height: 30vh; margin-top: 0; }
+  .hero-meta { font-size:clamp(19px, 5.8vw, 28px); gap: 14px; }
   .intro { min-height:330px; padding: 70px var(--page-pad); }
   .practical { min-height: 380px; padding: 70px var(--page-pad); }
   .practical h2 { font-size: clamp(38px, 11vw, 56px); margin-bottom: 8px; }
