@@ -81,7 +81,10 @@
       <p>Op zaterdag 14 november 2026 komt CHAUD naar Asiat Park in Vilvoorde.<br>
         Verwacht een avond vol live muziek, sterke artiesten en een warme sfeer. Samen maken we er niet alleen een onvergetelijke avond van, maar steunen we ook De Warmste Week.<br><br>
         <strong>14 november 2026 · Asiat Park – Vilvoorde</strong></p>
-      <a class="ticket-button ticket-button--dark merch-btn" href="https://app.assistonline.eu/mvc/activity?key=453ba35c-c68e-4f48-9986-17994513e3be" target="_blank" rel="noopener">Koop je tickets</a>
+      <div class="presale-actions" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 36px;">
+        <a class="ticket-button ticket-button--dark" style="margin-top: 0; min-width: 180px;" href="https://app.assistonline.eu/mvc/activity?key=453ba35c-c68e-4f48-9986-17994513e3be" target="_blank" rel="noopener">Koop je tickets</a>
+        <a class="ticket-button ticket-button--dark" style="margin-top: 0; min-width: 180px;" href="#faq" onclick="const el = document.getElementById('faq-uitpas'); if (el) el.open = true;">UITPAS ticket</a>
+      </div>
     </section>
 
     <!-- 2. TICKETS -->
@@ -476,6 +479,22 @@
               </div>
               <span class="partner-name">Vestaguard</span>
             </div>
+
+            <!-- 26. BenAtTheCam -->
+            <div class="partner-card partner-card--regular">
+              <div class="partner-logo-box">
+                <img class="partner-logo partner-logo--tall" src="assets/partners/BenAtTheCam/logo.webp" alt="BenAtTheCam" loading="lazy">
+              </div>
+              <span class="partner-name">BenAtTheCam</span>
+            </div>
+
+            <!-- 27. Branding door Luypaert.png -->
+            <div class="partner-card partner-card--regular">
+              <div class="partner-logo-box">
+                <img class="partner-logo" src="assets/partners/Branding door/logo.webp" alt="Branding door Luypaert.png" loading="lazy">
+              </div>
+              <span class="partner-name">Branding door</span>
+            </div>
           </div>
         </div>
       </div>
@@ -555,7 +574,7 @@
           <p class="faq-answer">Tickets zijn verkrijgbaar via de ticketknop op onze website.</p>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-uitpas">
           <summary class="faq-question">
             <span>Heb je UiTPAS met kansentarief?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
